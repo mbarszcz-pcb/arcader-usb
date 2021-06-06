@@ -1,4 +1,4 @@
-# arcader-usb
+# ArcadeR-USB
 Replacement PCB that brings USB connectivity to the Retroradionics ArcadeR Joystick
 
 <img src="./images/pcb/arcader-usb-render-diagonal.PNG" width=400px>
