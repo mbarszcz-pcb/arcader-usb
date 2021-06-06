@@ -1,7 +1,7 @@
 # arcader-usb
 Replacement PCB that brings USB connectivity to the Retroradionics ArcadeR Joystick
 
-<img src="./images/arcader-usb-render-diagonal.PNG" width=400px>
+<img src="./images/pcb/arcader-usb-render-diagonal.PNG" width=400px>
 
 Quick Links
 * [Schematic](pdf/arcader-usb-1.0-schematic.pdf)
@@ -74,7 +74,8 @@ The Atmega32u4 on the ArcadeR USB needs to be programmed as an Arduino Leonardo 
 
 The ICSP header on the ArcadeR USB is compatible with the standard Arduino ICSP pinout, and can be programmed as per the examples [here](https://www.arduino.cc/en/Tutorial/BuiltInExamples/ArduinoISP#how-to-wire-your-boards).  When programming the microcontroller, it is important not to connect the USB cable to your PC until this has been completed.  Connect up your Arduino Uno to the ICSP header on the ArcaderUSB board, and follow the instructions above.  The key here is to select "Programmer: Arduino as ISP" and "Board:" as Arduino Leonardo.  The "board" setting is the board you are programming INTO the Atmega32u4 (we're making the ArcadeR USB a Leonardo), not the board you are programming it from (Likely an Arduino UNO).
 
-<img src="./images/arduino-as-icsp.jpg" width=400px>
+<img src="./images/photos/arduino-as-icsp.jpg" width=400px>
+<img src="./images/photos/arduino-as-icsp-2.jpg" width=400px>
 
 ### Part 2 - Load the firmware sketch
 Once the ICSP programming is complete, disconnect the ICSP header.  You will need the [Arudino IDE](https://www.arduino.cc/en/software) installed to load the firmware (Arduino sketch) onto the ArcadeR USB.  If you have used an Arduino before, this part should be very familiar.  Connect your USB cable and attach the ArcadeR USB to your computer.  Select File > Open and navigate to the .ino sketch of the firmware.  Under the tools menu, select board: "Arduino Leonardo"
