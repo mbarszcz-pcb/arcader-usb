@@ -26,7 +26,8 @@ The ArcadeR USB aims to solve these problems plus introduces some extra features
 
 
 ## Bill of Materials (BOM)
-[BOM]("ArcadeR USB BOM.xlsx")
+* [Excel BOM](ArcadeR-USB-BOM.xlsx)
+
 | Reference  | Type                   | Value  | Qty | Manufacturer               | Part #             | Digikey Part                | Description                                  | Sub Part      | Sub Digikey      |
 |------------|------------------------|--------|-----|----------------------------|--------------------|-----------------------------|----------------------------------------------|---------------|------------------|
 | U1         | Microcontroller        |        | 1   | Microchip                  | ATMEGA32U4RC-AU    | ATMEGA32U4RC-AU-ND          | Microcontroller                              | ATMEGA32U4-AU | ATMEGA32U4-AU-ND |
@@ -96,7 +97,7 @@ Once everything is set, hit Sketch > Upload.  If the board does not program succ
 
 ## Links
 * [Retro Radionics - Maker of the ArcadeR Joystick(https://retroradionics.co.uk/)
-* [Arduino IDE](https://www.arduino.cc/en/software)\
+* [Arduino IDE](https://www.arduino.cc/en/software)
 * [Daemonbite Arcade Firmware Project](https://github.com/MickGyver/DaemonBite-Arcade-Encoder)
 
 
