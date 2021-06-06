@@ -96,7 +96,7 @@ Once everything is set, hit Sketch > Upload.  If the board does not program succ
 
 
 ## Links
-* [Retro Radionics - Maker of the ArcadeR Joystick(https://retroradionics.co.uk/)
+* [Retro Radionics - Maker of the ArcadeR Joystick](https://retroradionics.co.uk/)
 * [Arduino IDE](https://www.arduino.cc/en/software)
 * [Daemonbite Arcade Firmware Project](https://github.com/MickGyver/DaemonBite-Arcade-Encoder)
 
