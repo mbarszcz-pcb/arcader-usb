@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "ArcadeR USB")(type KiCad)(uri "${KIPRJMOD}/ArcadeR USB.pretty")(options "")(descr ""))
+)

@@ -1,0 +1,930 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 1 1
+Title ""
+Date "2021-02-13"
+Rev "1.0"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Conn_01x02_Male J21
+U 1 1 6003608C
+P 4880 3310
+F 0 "J21" H 4675 3345 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 4525 3275 50  0001 C CNN
+F 2 "Connector_Molex:Molex_PicoBlade_53261-0271_1x02-1MP_P1.25mm_Horizontal" H 4880 3310 50  0001 C CNN
+F 3 "~" H 4880 3310 50  0001 C CNN
+	1    4880 3310
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x05_Male J41
+U 1 1 6003E9EF
+P 4840 6140
+F 0 "J41" H 4605 6260 50  0000 C CNN
+F 1 "Conn_01x05_Male" H 4365 6415 50  0001 C CNN
+F 2 "Connector_Molex:Molex_PicoBlade_53261-0571_1x05-1MP_P1.25mm_Horizontal" H 4840 6140 50  0001 C CNN
+F 3 "~" H 4840 6140 50  0001 C CNN
+	1    4840 6140
+	1    0    0    -1  
+$EndComp
+Text Notes 4665 3065 0    79   Italic 16
+Button 1
+Text Notes 4630 4415 0    79   Italic 16
+Button 2
+Text Notes 4675 5760 0    79   Italic 16
+Joystick
+$Comp
+L MCU_Microchip_ATmega:ATmega32U4-AU U1
+U 1 1 60044DE1
+P 7775 3615
+F 0 "U1" H 8325 1715 50  0000 C CNN
+F 1 "ATmega32U4-AU" H 8325 1615 50  0000 C CNN
+F 2 "Package_QFP:TQFP-44_10x10mm_P0.8mm" H 7775 3615 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7766-8-bit-AVR-ATmega16U4-32U4_Datasheet.pdf" H 7775 3615 50  0001 C CNN
+	1    7775 3615
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Crystal_Small Y1
+U 1 1 600533E6
+P 6725 2415
+F 0 "Y1" V 6679 2503 50  0000 L CNN
+F 1 "16MHz" V 6770 2503 50  0000 L CNN
+F 2 "Crystal:Crystal_HC49-4H_Vertical" H 6725 2415 50  0001 C CNN
+F 3 "~" H 6725 2415 50  0001 C CNN
+	1    6725 2415
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C3
+U 1 1 60054574
+P 6475 2515
+F 0 "C3" V 6550 2415 50  0000 C CNN
+F 1 "22pF" V 6550 2640 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 6475 2515 50  0001 C CNN
+F 3 "~" H 6475 2515 50  0001 C CNN
+	1    6475 2515
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 600523E4
+P 6475 2315
+F 0 "C2" V 6375 2215 50  0000 C CNN
+F 1 "22pF" V 6375 2440 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 6475 2315 50  0001 C CNN
+F 3 "~" H 6475 2315 50  0001 C CNN
+	1    6475 2315
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 6005A3DB
+P 6200 2415
+F 0 "#PWR0101" H 6200 2165 50  0001 C CNN
+F 1 "GND" V 6205 2287 50  0000 R CNN
+F 2 "" H 6200 2415 50  0001 C CNN
+F 3 "" H 6200 2415 50  0001 C CNN
+	1    6200 2415
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7175 2315 6725 2315
+Wire Wire Line
+	7175 2515 6725 2515
+Wire Wire Line
+	6575 2515 6725 2515
+Connection ~ 6725 2515
+Wire Wire Line
+	6725 2315 6575 2315
+Connection ~ 6725 2315
+Wire Wire Line
+	6200 2415 6300 2415
+Wire Wire Line
+	6300 2415 6300 2315
+Wire Wire Line
+	6300 2315 6375 2315
+Wire Wire Line
+	6300 2415 6300 2515
+Wire Wire Line
+	6300 2515 6375 2515
+Connection ~ 6300 2415
+Wire Wire Line
+	7675 1815 7675 1740
+Wire Wire Line
+	7675 1740 7775 1740
+Wire Wire Line
+	7775 1740 7775 1815
+Connection ~ 7675 1740
+Wire Wire Line
+	7775 1740 7875 1740
+Wire Wire Line
+	7875 1740 7875 1815
+Connection ~ 7775 1740
+$Comp
+L Device:R R5
+U 1 1 600611C8
+P 6900 1560
+F 0 "R5" H 6970 1606 50  0000 L CNN
+F 1 "10K" H 6970 1515 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 6830 1560 50  0001 C CNN
+F 3 "~" H 6900 1560 50  0001 C CNN
+	1    6900 1560
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 2115 7175 2115
+$Comp
+L power:GND #PWR0102
+U 1 1 60064B7B
+P 7725 5565
+F 0 "#PWR0102" H 7725 5315 50  0001 C CNN
+F 1 "GND" H 7730 5392 50  0000 C CNN
+F 2 "" H 7725 5565 50  0001 C CNN
+F 3 "" H 7725 5565 50  0001 C CNN
+	1    7725 5565
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7675 5415 7675 5490
+Wire Wire Line
+	7675 5490 7725 5490
+Wire Wire Line
+	7775 5490 7775 5415
+Wire Wire Line
+	7725 5490 7725 5565
+Connection ~ 7725 5490
+Wire Wire Line
+	7725 5490 7775 5490
+$Comp
+L Device:C_Small C1
+U 1 1 600668F0
+P 6425 2815
+F 0 "C1" H 6575 2790 50  0000 C CNN
+F 1 "1uF" H 6600 2865 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 6425 2815 50  0001 C CNN
+F 3 "~" H 6425 2815 50  0001 C CNN
+	1    6425 2815
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:VCC #PWR0104
+U 1 1 60073E89
+P 7675 1390
+F 0 "#PWR0104" H 7675 1240 50  0001 C CNN
+F 1 "VCC" H 7692 1563 50  0000 C CNN
+F 2 "" H 7675 1390 50  0001 C CNN
+F 3 "" H 7675 1390 50  0001 C CNN
+	1    7675 1390
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 60080BAE
+P 6425 2915
+F 0 "#PWR0106" H 6425 2665 50  0001 C CNN
+F 1 "GND" H 6430 2742 50  0000 C CNN
+F 2 "" H 6425 2915 50  0001 C CNN
+F 3 "" H 6425 2915 50  0001 C CNN
+	1    6425 2915
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 60083737
+P 8675 4215
+F 0 "#PWR0107" H 8675 3965 50  0001 C CNN
+F 1 "GND" V 8680 4087 50  0000 R CNN
+F 2 "" H 8675 4215 50  0001 C CNN
+F 3 "" H 8675 4215 50  0001 C CNN
+	1    8675 4215
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8375 4215 8675 4215
+$Comp
+L power:VCC #PWR0108
+U 1 1 6008E55B
+P 6950 2915
+F 0 "#PWR0108" H 6950 2765 50  0001 C CNN
+F 1 "VCC" V 6968 3042 50  0000 L CNN
+F 2 "" H 6950 2915 50  0001 C CNN
+F 3 "" H 6950 2915 50  0001 C CNN
+	1    6950 2915
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7175 2915 6950 2915
+$Comp
+L Device:C_Small C4
+U 1 1 60092C3B
+P 6800 3515
+F 0 "C4" H 6925 3490 50  0000 C CNN
+F 1 "1uF" H 6950 3565 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 6800 3515 50  0001 C CNN
+F 3 "~" H 6800 3515 50  0001 C CNN
+	1    6800 3515
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 60092C41
+P 6800 3615
+F 0 "#PWR0109" H 6800 3365 50  0001 C CNN
+F 1 "GND" H 6805 3442 50  0000 C CNN
+F 2 "" H 6800 3615 50  0001 C CNN
+F 3 "" H 6800 3615 50  0001 C CNN
+	1    6800 3615
+	1    0    0    -1  
+$EndComp
+Text GLabel 8725 3815 2    50   Input ~ 0
+LEDTx
+Wire Wire Line
+	8375 2115 8675 2115
+Wire Wire Line
+	8375 3815 8725 3815
+Text GLabel 1655 1710 0    50   Input ~ 0
+LEDTx
+Text GLabel 1655 2160 0    50   Input ~ 0
+LEDRx
+$Comp
+L Device:R R1
+U 1 1 600A5938
+P 1980 1710
+F 0 "R1" V 1880 1660 50  0000 L CNN
+F 1 "1K" V 1980 1660 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 1910 1710 50  0001 C CNN
+F 3 "~" H 1980 1710 50  0001 C CNN
+	1    1980 1710
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 600A6720
+P 1980 2160
+F 0 "R2" V 1880 2110 50  0000 L CNN
+F 1 "1K" V 1980 2110 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 1910 2160 50  0001 C CNN
+F 3 "~" H 1980 2160 50  0001 C CNN
+	1    1980 2160
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 600A7463
+P 2455 1710
+F 0 "D1" H 2455 1585 50  0000 C CNN
+F 1 "Tx" H 2455 1835 50  0000 C CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 2455 1710 50  0001 C CNN
+F 3 "~" H 2455 1710 50  0001 C CNN
+	1    2455 1710
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 600A927F
+P 2455 2160
+F 0 "D2" H 2455 2035 50  0000 C CNN
+F 1 "Rx" H 2455 2285 50  0000 C CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 2455 2160 50  0001 C CNN
+F 3 "~" H 2455 2160 50  0001 C CNN
+	1    2455 2160
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0110
+U 1 1 600ABC9D
+P 2805 1160
+F 0 "#PWR0110" H 2805 1010 50  0001 C CNN
+F 1 "VCC" H 2822 1333 50  0000 C CNN
+F 2 "" H 2805 1160 50  0001 C CNN
+F 3 "" H 2805 1160 50  0001 C CNN
+	1    2805 1160
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2130 1710 2305 1710
+Wire Wire Line
+	1830 1710 1655 1710
+Wire Wire Line
+	2305 2160 2130 2160
+Wire Wire Line
+	2605 1710 2805 1710
+Wire Wire Line
+	2805 1710 2805 1510
+Wire Wire Line
+	2805 1710 2805 2160
+Wire Wire Line
+	2805 2160 2605 2160
+Connection ~ 2805 1710
+Text GLabel 5690 6040 2    50   Input ~ 0
+UP
+Text GLabel 5690 6140 2    50   Input ~ 0
+DOWN
+Text GLabel 5690 6240 2    50   Input ~ 0
+LEFT
+Text GLabel 5690 6340 2    50   Input ~ 0
+RIGHT
+Text GLabel 5280 3310 2    50   Input ~ 0
+B1
+Text GLabel 5265 4750 2    50   Input ~ 0
+B2
+Text GLabel 5280 3410 2    50   Input ~ 0
+GND
+Text GLabel 5265 4650 2    50   Input ~ 0
+GND
+Text GLabel 5690 5940 2    50   Input ~ 0
+GND
+Wire Wire Line
+	5080 3310 5130 3310
+Wire Wire Line
+	5080 3410 5205 3410
+Text GLabel 8575 5015 2    50   Input ~ 0
+UP
+Text GLabel 8575 4915 2    50   Input ~ 0
+DOWN
+Text GLabel 8575 4815 2    50   Input ~ 0
+LEFT
+Text GLabel 8575 4715 2    50   Input ~ 0
+RIGHT
+Text GLabel 8675 2315 2    50   Input ~ 0
+B7
+Text GLabel 8675 2415 2    50   Input ~ 0
+B8
+Wire Wire Line
+	8375 2315 8525 2315
+Wire Wire Line
+	8375 5015 8575 5015
+Wire Wire Line
+	8375 4915 8575 4915
+Wire Wire Line
+	8375 4815 8575 4815
+Wire Wire Line
+	8375 4715 8575 4715
+Wire Wire Line
+	6800 3415 7175 3415
+Wire Wire Line
+	6425 2715 7175 2715
+Text GLabel 8675 3415 2    50   Input ~ 0
+B2
+Text GLabel 8675 3315 2    50   Input ~ 0
+B1
+Wire Wire Line
+	8375 3315 8675 3315
+Wire Wire Line
+	8675 3415 8375 3415
+Text GLabel 6950 3115 0    50   BiDi ~ 0
+D+
+Text GLabel 6950 3215 0    50   BiDi ~ 0
+D-
+Wire Wire Line
+	6950 3115 7175 3115
+Wire Wire Line
+	7175 3215 6950 3215
+$Comp
+L Device:C_Small C7
+U 1 1 60205CBE
+P 7925 1515
+F 0 "C7" V 8050 1515 50  0000 C CNN
+F 1 "0.1uF" V 7800 1490 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 7925 1515 50  0001 C CNN
+F 3 "~" H 7925 1515 50  0001 C CNN
+	1    7925 1515
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7675 1390 7675 1515
+Wire Wire Line
+	7825 1515 7675 1515
+Connection ~ 7675 1515
+Wire Wire Line
+	7675 1515 7675 1740
+$Comp
+L power:GND #PWR0113
+U 1 1 6020F9C8
+P 8225 1590
+F 0 "#PWR0113" H 8225 1340 50  0001 C CNN
+F 1 "GND" H 8230 1417 50  0000 C CNN
+F 2 "" H 8225 1590 50  0001 C CNN
+F 3 "" H 8225 1590 50  0001 C CNN
+	1    8225 1590
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8025 1515 8225 1515
+Wire Wire Line
+	8225 1515 8225 1590
+Wire Wire Line
+	5080 3685 5130 3685
+Wire Wire Line
+	5130 3685 5130 3310
+Connection ~ 5130 3310
+Wire Wire Line
+	5130 3310 5280 3310
+Wire Wire Line
+	5080 3785 5205 3785
+Wire Wire Line
+	5205 3785 5205 3410
+Connection ~ 5205 3410
+Wire Wire Line
+	5205 3410 5280 3410
+$Comp
+L Connector:Conn_01x02_Male J32
+U 1 1 600743B0
+P 4865 5075
+F 0 "J32" H 4660 5125 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 4390 5015 50  0000 C CNN
+F 2 "ArcadeR USB:PinHeader_1x02_P2.54mm_Vertical-BoxSilk" H 4865 5075 50  0001 C CNN
+F 3 "~" H 4865 5075 50  0001 C CNN
+	1    4865 5075
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5065 5075 5115 5075
+Wire Wire Line
+	5065 5175 5190 5175
+$Comp
+L Connector:Conn_01x05_Male J42
+U 1 1 6009DCD5
+P 4840 6865
+F 0 "J42" H 4615 7010 50  0000 C CNN
+F 1 "Conn_01x05_Male" H 4355 6920 50  0000 C CNN
+F 2 "ArcadeR USB:PinHeader_1x05_P2.54mm_Vertical-BoxSilk" H 4840 6865 50  0001 C CNN
+F 3 "~" H 4840 6865 50  0001 C CNN
+	1    4840 6865
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5040 5940 5165 5940
+Wire Wire Line
+	5690 6040 5265 6040
+Wire Wire Line
+	5040 6140 5365 6140
+Wire Wire Line
+	5690 6240 5465 6240
+Wire Wire Line
+	5040 6340 5565 6340
+Wire Wire Line
+	5040 6665 5165 6665
+Wire Wire Line
+	5165 6665 5165 5940
+Connection ~ 5165 5940
+Wire Wire Line
+	5165 5940 5690 5940
+Wire Wire Line
+	5040 6765 5265 6765
+Wire Wire Line
+	5265 6765 5265 6040
+Connection ~ 5265 6040
+Wire Wire Line
+	5265 6040 5040 6040
+Wire Wire Line
+	5040 6865 5365 6865
+Wire Wire Line
+	5365 6865 5365 6140
+Connection ~ 5365 6140
+Wire Wire Line
+	5365 6140 5690 6140
+Wire Wire Line
+	5040 6965 5465 6965
+Wire Wire Line
+	5465 6965 5465 6240
+Connection ~ 5465 6240
+Wire Wire Line
+	5465 6240 5040 6240
+Wire Wire Line
+	5040 7065 5565 7065
+Wire Wire Line
+	5565 7065 5565 6340
+Connection ~ 5565 6340
+Wire Wire Line
+	5565 6340 5690 6340
+Text Notes 3845 3425 0    50   ~ 0
+Molex Picoblade 53261
+Text Notes 3830 4745 0    50   ~ 0
+Molex Picoblade 53261
+Text Notes 3775 6160 0    50   ~ 0
+Molex Picoblade 53261
+$Comp
+L Connector:Conn_01x02_Male J22
+U 1 1 600605A3
+P 4880 3685
+F 0 "J22" H 4665 3725 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 4405 3625 50  0000 C CNN
+F 2 "ArcadeR USB:PinHeader_1x02_P2.54mm_Vertical-BoxSilk" H 4880 3685 50  0001 C CNN
+F 3 "~" H 4880 3685 50  0001 C CNN
+	1    4880 3685
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 60128229
+P 9370 6410
+F 0 "H2" H 9470 6456 50  0000 L CNN
+F 1 "MountingHole" H 9470 6365 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.5mm" H 9370 6410 50  0001 C CNN
+F 3 "~" H 9370 6410 50  0001 C CNN
+	1    9370 6410
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5065 4650 5190 4650
+Wire Wire Line
+	5115 5075 5115 4750
+Wire Wire Line
+	5065 4750 5115 4750
+Connection ~ 5115 4750
+Wire Wire Line
+	5115 4750 5265 4750
+Wire Wire Line
+	5190 5175 5190 4650
+Connection ~ 5190 4650
+Wire Wire Line
+	5190 4650 5265 4650
+$Comp
+L Jumper:SolderJumper_2_Bridged JP1
+U 1 1 6018E744
+P 2805 1360
+F 0 "JP1" V 2759 1428 50  0000 L CNN
+F 1 "SolderJumper_2_Bridged" V 2850 1428 50  0000 L CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 2805 1360 50  0001 C CNN
+F 3 "~" H 2805 1360 50  0001 C CNN
+	1    2805 1360
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2805 1160 2805 1210
+$Comp
+L Switch:SW_Push SW3
+U 1 1 600B21F3
+P 6580 1850
+F 0 "SW3" H 6580 2135 50  0000 C CNN
+F 1 "SW_Push" H 6580 2044 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm_H4.3mm" V 6950 2390 50  0001 C CNN
+F 3 "~" H 6580 2050 50  0001 C CNN
+	1    6580 1850
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0114
+U 1 1 600B3BA4
+P 6380 1900
+F 0 "#PWR0114" H 6380 1650 50  0001 C CNN
+F 1 "GND" H 6385 1727 50  0000 C CNN
+F 2 "" H 6380 1900 50  0001 C CNN
+F 3 "" H 6380 1900 50  0001 C CNN
+	1    6380 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6380 1900 6380 1850
+Wire Wire Line
+	6780 1850 6900 1850
+Wire Wire Line
+	6900 1850 6900 2115
+$Comp
+L power:VCC #PWR0105
+U 1 1 600746EF
+P 6900 1340
+F 0 "#PWR0105" H 6900 1190 50  0001 C CNN
+F 1 "VCC" H 6917 1513 50  0000 C CNN
+F 2 "" H 6900 1340 50  0001 C CNN
+F 3 "" H 6900 1340 50  0001 C CNN
+	1    6900 1340
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 1710 6900 1850
+Connection ~ 6900 1850
+Wire Wire Line
+	6900 1410 6900 1340
+Text Notes 1865 4620 0    79   Italic 16
+ICSP
+Text Notes 1905 4810 2    50   ~ 0
+MISO
+Text Notes 1905 4900 2    50   ~ 0
++Vcc
+Text Notes 1905 5000 2    50   ~ 0
+SCK
+Text Notes 1905 5100 2    50   ~ 0
+MOSI
+Text Notes 1905 5200 2    50   ~ 0
+Reset
+Text Notes 1915 5300 2    50   ~ 0
+Gnd
+$Comp
+L power:GND #PWR0115
+U 1 1 600DAAF7
+P 2640 5315
+F 0 "#PWR0115" H 2640 5065 50  0001 C CNN
+F 1 "GND" H 2645 5142 50  0000 C CNN
+F 2 "" H 2640 5315 50  0001 C CNN
+F 3 "" H 2640 5315 50  0001 C CNN
+	1    2640 5315
+	1    0    0    -1  
+$EndComp
+Text GLabel 7030 1850 2    50   Input ~ 0
+~RES
+Wire Wire Line
+	7030 1850 6900 1850
+$Comp
+L power:VCC #PWR0116
+U 1 1 600D9260
+P 2640 4740
+F 0 "#PWR0116" H 2640 4590 50  0001 C CNN
+F 1 "VCC" H 2657 4913 50  0000 C CNN
+F 2 "" H 2640 4740 50  0001 C CNN
+F 3 "" H 2640 4740 50  0001 C CNN
+	1    2640 4740
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x06_Male J5
+U 1 1 600D570A
+P 1965 4990
+F 0 "J5" H 1495 5100 50  0000 C CNN
+F 1 "Conn_01x06_Male" H 1205 5000 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 1965 4990 50  0001 C CNN
+F 3 "~" H 1965 4990 50  0001 C CNN
+	1    1965 4990
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2165 5290 2640 5290
+Wire Wire Line
+	2640 5290 2640 5315
+Text GLabel 2465 5190 2    50   Input ~ 0
+~RES
+Wire Wire Line
+	2165 4890 2640 4890
+Wire Wire Line
+	2640 4740 2640 4890
+Text GLabel 2240 4790 2    50   Input ~ 0
+MISO
+Text GLabel 2240 4990 2    50   Input ~ 0
+SCK
+Text GLabel 2240 5090 2    50   Input ~ 0
+MOSI
+Wire Wire Line
+	2165 4990 2240 4990
+Wire Wire Line
+	2165 5090 2240 5090
+Wire Wire Line
+	2165 4790 2240 4790
+Wire Wire Line
+	2165 5190 2465 5190
+Text GLabel 9200 2315 2    50   Input ~ 0
+MOSI
+Text GLabel 9200 2215 2    50   Input ~ 0
+SCK
+Text GLabel 9200 2415 2    50   Input ~ 0
+MISO
+Wire Wire Line
+	8675 2415 8525 2415
+Wire Wire Line
+	8525 2415 8525 2490
+Wire Wire Line
+	9050 2415 9200 2415
+Connection ~ 8525 2415
+Wire Wire Line
+	8525 2415 8375 2415
+Wire Wire Line
+	8525 2315 8525 2240
+Wire Wire Line
+	8525 2240 9050 2240
+Wire Wire Line
+	9050 2240 9050 2315
+Wire Wire Line
+	9050 2315 9200 2315
+Connection ~ 8525 2315
+Wire Wire Line
+	8525 2315 8675 2315
+Wire Wire Line
+	8525 2490 9050 2490
+Wire Wire Line
+	9050 2415 9050 2490
+Wire Wire Line
+	8375 2215 9200 2215
+Text Notes 9560 2410 1    50   ~ 0
+ICSP
+Wire Wire Line
+	1655 2160 1830 2160
+Text GLabel 8675 2115 2    50   Input ~ 0
+LEDRx
+$Comp
+L Connector:Conn_01x02_Male J31
+U 1 1 600377A9
+P 4865 4650
+F 0 "J31" H 4660 4705 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 4390 4800 50  0001 C CNN
+F 2 "Connector_Molex:Molex_PicoBlade_53261-0271_1x02-1MP_P1.25mm_Horizontal" H 4865 4650 50  0001 C CNN
+F 3 "~" H 4865 4650 50  0001 C CNN
+	1    4865 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW8
+U 1 1 600EF77C
+P 4685 2050
+F 0 "SW8" H 4685 2335 50  0000 C CNN
+F 1 "SW_Push" H 4685 2244 50  0000 C CNN
+F 2 "ArcadeR USB:SW_Tactile_SPST_Angled_PTS645Vx83-2LFS-DoubleSidedSS" H 4685 2250 50  0001 C CNN
+F 3 "~" H 4685 2250 50  0001 C CNN
+	1    4685 2050
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5335 1600 5335 2050
+Wire Wire Line
+	5335 2050 5335 2225
+Connection ~ 5335 2050
+Wire Wire Line
+	4885 2050 5335 2050
+Wire Wire Line
+	4885 1600 5335 1600
+$Comp
+L power:GND #PWR0111
+U 1 1 6010D675
+P 5335 2225
+F 0 "#PWR0111" H 5335 1975 50  0001 C CNN
+F 1 "GND" H 5340 2052 50  0000 C CNN
+F 2 "" H 5335 2225 50  0001 C CNN
+F 3 "" H 5335 2225 50  0001 C CNN
+	1    5335 2225
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4210 2050 4485 2050
+Wire Wire Line
+	4210 1600 4485 1600
+Text GLabel 4210 2050 0    50   Input ~ 0
+B8
+Text GLabel 4210 1600 0    50   Input ~ 0
+B7
+$Comp
+L Switch:SW_Push SW7
+U 1 1 600EEA8E
+P 4685 1600
+F 0 "SW7" H 4685 1885 50  0000 C CNN
+F 1 "SW_Push" H 4685 1794 50  0000 C CNN
+F 2 "ArcadeR USB:SW_Tactile_SPST_Angled_PTS645Vx83-2LFS-DoubleSidedSS" H 4685 1800 50  0001 C CNN
+F 3 "~" H 4685 1800 50  0001 C CNN
+	1    4685 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 60124FF9
+P 8450 6410
+F 0 "H1" H 8550 6456 50  0000 L CNN
+F 1 "MountingHole" H 8550 6365 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.5mm" H 8450 6410 50  0001 C CNN
+F 3 "~" H 8450 6410 50  0001 C CNN
+	1    8450 6410
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 3655 2150 3685
+Wire Wire Line
+	1910 3655 1910 3685
+Wire Wire Line
+	2030 3570 2245 3570
+Connection ~ 2030 3570
+Wire Wire Line
+	2030 3655 2150 3655
+Connection ~ 2030 3655
+Wire Wire Line
+	2030 3655 2030 3570
+Wire Wire Line
+	2030 3905 2150 3905
+Connection ~ 2030 3905
+Wire Wire Line
+	2030 3950 2030 3905
+Wire Wire Line
+	1910 3905 2030 3905
+Wire Wire Line
+	1910 3655 2030 3655
+Wire Wire Line
+	2150 3905 2150 3885
+$Comp
+L Device:C_Small C6
+U 1 1 6019B3EB
+P 2150 3785
+F 0 "C6" H 2025 3760 50  0000 C CNN
+F 1 "10uF" H 1975 3840 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 2150 3785 50  0001 C CNN
+F 3 "~" H 2150 3785 50  0001 C CNN
+	1    2150 3785
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1910 3885 1910 3905
+Text Notes 1550 3600 2    50   ~ 0
++Vcc
+Text Notes 1555 3500 2    50   ~ 0
+D-
+Text Notes 1555 3400 2    50   ~ 0
+D+
+Wire Wire Line
+	1820 3570 2030 3570
+Wire Wire Line
+	2535 3470 1820 3470
+Wire Wire Line
+	1820 3370 2535 3370
+Wire Wire Line
+	2315 3270 1820 3270
+$Comp
+L power:GND #PWR0112
+U 1 1 601E4CA4
+P 2030 3950
+F 0 "#PWR0112" H 2030 3700 50  0001 C CNN
+F 1 "GND" H 2035 3777 50  0000 C CNN
+F 2 "" H 2030 3950 50  0001 C CNN
+F 3 "" H 2030 3950 50  0001 C CNN
+	1    2030 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C5
+U 1 1 6019982C
+P 1910 3785
+F 0 "C5" H 2035 3760 50  0000 C CNN
+F 1 "1uF" H 2060 3835 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 1910 3785 50  0001 C CNN
+F 3 "~" H 1910 3785 50  0001 C CNN
+	1    1910 3785
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2835 3370 2910 3370
+Wire Wire Line
+	2835 3470 2910 3470
+Text Notes 895  3420 0    50   ~ 0
+JST-XH
+$Comp
+L Device:R R3
+U 1 1 600850AA
+P 2685 3370
+F 0 "R3" V 2600 3315 50  0000 L CNN
+F 1 "22R" V 2685 3295 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2615 3370 50  0001 C CNN
+F 3 "~" H 2685 3370 50  0001 C CNN
+	1    2685 3370
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 60088B08
+P 2685 3470
+F 0 "R4" V 2775 3415 50  0000 L CNN
+F 1 "22R" V 2685 3395 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2615 3470 50  0001 C CNN
+F 3 "~" H 2685 3470 50  0001 C CNN
+	1    2685 3470
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:Conn_01x04_Male J11
+U 1 1 60040A67
+P 1620 3370
+F 0 "J11" H 1115 3450 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 1170 3595 50  0001 C CNN
+F 2 "ArcadeR USB:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical-BoxSilk-Back" H 1620 3370 50  0001 C CNN
+F 3 "~" H 1620 3370 50  0001 C CNN
+	1    1620 3370
+	1    0    0    -1  
+$EndComp
+Text GLabel 2315 3270 2    50   Input ~ 0
+GND
+Text GLabel 2910 3470 2    50   BiDi ~ 0
+D-
+Text GLabel 2910 3370 2    50   BiDi ~ 0
+D+
+Text Notes 1595 3060 0    79   Italic 16
+USB
+Text Label 2070 3370 0    50   ~ 0
+ExD+
+Text Label 2070 3470 0    50   ~ 0
+ExD-
+$Comp
+L power:VCC #PWR0117
+U 1 1 60135F5B
+P 2245 3570
+F 0 "#PWR0117" H 2245 3420 50  0001 C CNN
+F 1 "VCC" V 2245 3770 50  0000 C CNN
+F 2 "" H 2245 3570 50  0001 C CNN
+F 3 "" H 2245 3570 50  0001 C CNN
+	1    2245 3570
+	0    1    1    0   
+$EndComp
+Text Notes 1555 3300 2    50   ~ 0
+Gnd
+$EndSCHEMATC

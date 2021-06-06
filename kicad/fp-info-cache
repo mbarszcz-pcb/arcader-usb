@@ -1,0 +1,64 @@
+14500588164354
+ArcadeR USB
+ArcadeR-OriginalPCB
+
+
+0
+0
+0
+ArcadeR USB
+JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical-BoxSilk-Back
+JST XH series connector, B4B-XH-A (http://www.jst-mfg.com/product/pdf/eng/eXH.pdf), generated with kicad-footprint-generator
+connector JST XH vertical
+0
+4
+4
+ArcadeR USB
+JST_ZH_S2B-ZR_1x02_P1.50mm_Horizontal
+JST ZH series connector, https://www.jst-mfg.com/product/pdf/eng/eZH.pdf?6004e48c71240
+connector JST ZH side entry
+0
+2
+2
+ArcadeR USB
+JST_ZH_S5B-ZR_1x05_P1.50mm_Horizontal
+JST ZH series connector, https://www.jst-mfg.com/product/pdf/eng/eZH.pdf?6004e48c71240
+connector JST ZH side entry
+0
+5
+5
+ArcadeR USB
+PinHeader_1x02_P2.54mm_Vertical-BoxSilk
+Through hole straight pin header, 1x02, 2.54mm pitch, single row
+Through hole pin header THT 1x02 2.54mm single row
+0
+2
+2
+ArcadeR USB
+PinHeader_1x04_P2.54mm_Vertical-BoxDoubleSidedSS
+Through hole straight pin header, 1x04, 2.54mm pitch, single row
+Through hole pin header THT 1x04 2.54mm single row
+0
+4
+4
+ArcadeR USB
+PinHeader_1x04_P2.54mm_Vertical-BoxSilk
+Through hole straight pin header, 1x04, 2.54mm pitch, single row
+Through hole pin header THT 1x04 2.54mm single row
+0
+4
+4
+ArcadeR USB
+PinHeader_1x05_P2.54mm_Vertical-BoxSilk
+Through hole straight pin header, 1x05, 2.54mm pitch, single row
+Through hole pin header THT 1x05 2.54mm single row
+0
+5
+5
+ArcadeR USB
+SW_Tactile_SPST_Angled_PTS645Vx83-2LFS-DoubleSidedSS
+tactile switch SPST right angle, PTS645VL83-2 LFS
+tactile switch SPST angled PTS645VL83-2 LFS C&K Button
+0
+4
+2
