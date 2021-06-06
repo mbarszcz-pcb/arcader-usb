@@ -66,8 +66,7 @@ Most of the build is pretty self explanitory, although there are a few things to
 
 * If you plug your ArcadeR USB into your system and nothing happens, check that the reset button isn't being held down.  
 
-
-* When you close up the case, make sure the cables aren't interfering with the closing of the case, fire button connectors, or the reset button.
+* When you close up the case, take care to make sure nothing is being pinched and the cables aren't interfering with the closing of the case.  The strain relief at the front is a fairly tight fit though.
 
 ## Programming the ArcadeR USB
 Once the board has been assembled, you will need to program the microcontroller as an Arduino Leonardo and then load the firmware sketch. 
