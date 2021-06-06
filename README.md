@@ -1,5 +1,5 @@
 # ArcadeR-USB
-Replacement PCB that brings USB connectivity to the Retroradionics ArcadeR Joystick
+A Replacement PCB that brings USB connectivity to the Retroradionics ArcadeR Joystick based on the Daemonbite Arcade Encoder and the Arduino Leonardo.
 
 <img src="./images/pcb/arcader-usb-render-diagonal.PNG" width=800px>
 
