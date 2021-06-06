@@ -1,7 +1,7 @@
 # ArcadeR-USB
 Replacement PCB that brings USB connectivity to the Retroradionics ArcadeR Joystick
 
-<img src="./images/pcb/arcader-usb-render-diagonal.PNG" width=400px>
+<img src="./images/pcb/arcader-usb-render-diagonal.PNG" width=800px>
 
 Quick Links
 * [Schematic](pdf/arcader-usb-1.0-schematic.pdf)
@@ -57,9 +57,15 @@ Most of the build is pretty self explanitory, although there are a few things to
 
 * The ICSP pin header is a tight fit in the joystick.  It is designed to be mounted to the bottom of the board, but ensure that you check fitment before soldering the pin header.  Depending on the length of your headers, you may need to "cheat" by pushing the header against a hard surface to make the pin length a bit shorter.  If need be, trim any excess length off the back of the pin header (top of the board) to preserve the bevel on the pin header.
 
-* The reset button has proven to be unnecessary and can simply be omitted in most cases.  It is a tight fit under the right fire button.  While it does clear, care must be taken to ensure the connectors on the bottom of the fire button are not depressing the reset button when assembled.  I haven't had a use for it as the Arduino IDE can auto-reset the microcontroller over USB.  My recommendation would simply be to not solder it to the board and if a reset is needed, short the pads with a small pair of tweezers.
-
 * I recommend installing the front facing right angle tactile switches into the PCB, fitting the PCB into the Arcader USB joystick housing, and then soldering 1 or 2 of the pins on the tactile switches in place.  This will ensure a nice straight fit on the front buttons.
+
+
+* The reset button has proven to be unnecessary and can simply be omitted in most cases.  I have not needed to use the reset button as the Arduino IDE can auto-reset the microcontroller over USB.  My recommendation would simply be to not include it nd if a reset is needed, short the pads with a small pair of tweezers.  Although it can be made to work, it is a tight fit under the right fire button.  If you do decide to include it, care must be taken to ensure the connectors on the bottom of fire button 2 are not depressing the reset button when assembled.  The best way I've found to ensure enough clearance is to unplug the two connectors on the bottom of the fire button, bend the two flat tabs completely flat, and then reattach the connector.
+
+<img src="./images/photos/reset-clearance.png" width=1000px>
+
+* If you plug your ArcadeR USB into your system and nothing happens, check that the reset button isn't being held down.  
+
 
 * When you close up the case, make sure the cables aren't interfering with the closing of the case, fire button connectors, or the reset button.
 
@@ -75,17 +81,17 @@ The Atmega32u4 on the ArcadeR USB needs to be programmed as an Arduino Leonardo 
 
 The ICSP header on the ArcadeR USB is compatible with the standard Arduino ICSP pinout, and can be programmed as per the examples [here](https://www.arduino.cc/en/Tutorial/BuiltInExamples/ArduinoISP#how-to-wire-your-boards).  When programming the microcontroller, it is important not to connect the USB cable to your PC until this has been completed.  Connect up your Arduino Uno to the ICSP header on the ArcaderUSB board, and follow the instructions above.  The key here is to select "Programmer: Arduino as ISP" and "Board:" as Arduino Leonardo.  The "board" setting is the board you are programming INTO the Atmega32u4 (we're making the ArcadeR USB a Leonardo), not the board you are programming it from (Likely an Arduino UNO).
 
-<img src="./images/photos/arduino-as-icsp.jpg" width=400px>
-<img src="./images/photos/arduino-as-icsp-2.jpg" width=400px>
+<img src="./images/photos/arduino-as-icsp.jpg" width=800px>
+<img src="./images/photos/arduino-as-icsp-2.jpg" width=800px>
 
 ### Part 2 - Load the firmware sketch
 Once the ICSP programming is complete, disconnect the ICSP header.  You will need the [Arudino IDE](https://www.arduino.cc/en/software) installed to load the firmware (Arduino sketch) onto the ArcadeR USB.  If you have used an Arduino before, this part should be very familiar.  Connect your USB cable and attach the ArcadeR USB to your computer.  Select File > Open and navigate to the .ino sketch of the firmware.  Under the tools menu, select board: "Arduino Leonardo"
 
-<img src="./images/arduino-programming.PNG" width=400px>
+<img src="./images/arduino-programming.PNG" width=800px>
 
 Once everything is set, hit Sketch > Upload.  If the board does not program successfully, check Device manager to make sure the Arduino Leonardo is showing up under "Ports (COM & LPT)".  If not, check your cables and make sure the ICSP completed successfully.  Once the sketch has been uploaded, unplug the Arcader USB from your computer and reconnect it.  If you are on a Windows PC, you can hit start > run > type "joy.cpl" and hit enter.  This will open the Game Controllers configuration, and you should now see a controller named "Arduino Leonardo".  When you hit properties, it will display the buttons and joystick axis.  Move the joystick around and test that all your buttons and directions are working.  If there are any issues, go back and check your soldering and cables.  Any changes to the firmware can simply be done over USB now without the ICSP header or disassembling the joystick.
 
-<img src="./images/joy-cpl.PNG" width=400px>
+<img src="./images/joy-cpl.PNG" width=800px>
 
 ## Using the ArcadeR USB
 * The firmware is designed to use the HID Joystick library, so no additional drivers are required and it should be out-of-the-box compatible with most systems.
