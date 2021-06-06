@@ -10,14 +10,14 @@ Quick Links
 * [Photos](images/photos)
 
 ## Introduction
-The ArcadeR USB is an open source PCB project with firmware based on the open source [DaemonBite Arcade Encoder](https://github.com/MickGyver/DaemonBite-Arcade-Encoder) and circuit design based on the Arduino Leonardo.  The original PCB inside the ArcadeR output provided Atari/Amiga/C64 style outputs through a DB9 connector.  While the DB9 connector is great for retro computers and consoles, using the ArcadeR with a PC, Raspberry Pi, or MiSTER requires external adapters.  Moreover, many of the inexpensive adapters introduced significant input latency, running the experience.
+The ArcadeR USB is an open source PCB project with firmware based on the open source [DaemonBite Arcade Encoder Firmware](https://github.com/MickGyver/DaemonBite-Arcade-Encoder) and circuit design based on the Arduino Leonardo.  The original PCB inside the ArcadeR output provided Atari/Amiga/C64 style outputs through a DB9 connector.  While the DB9 connector is great for retro computers and consoles, using the ArcadeR with a PC, Raspberry Pi, or MiSTER requires external adapters.  Moreover, many of the inexpensive adapters introduced significant input latency, running the experience.
 
 The ArcadeR USB aims to solve these problems plus introduces some extra features by simply providing a new PCB that fits inside the joystick with no modifications require and allows you to simply plug in the internal joystick and button cables.
 
 ## Features:
 * DIY / Open Source
 * Simple installation. Remove the screws, replace the PCB and cable, and plug everything back in
-* Built around the Atmega32U4, Arduino Libraries, and DaemonBite firmware.  Use the firmware as-is or customize however you see fit
+* Built around the Atmega32U4, Arduino Libraries, and DaemonBite Arcade Encoder firmware.  Use the firmware as-is or customize however you see fit
 * Functions as a standard HID Gamepad, so no extra drivers required
 * Replaces the two front latching switches with tactile switches wired as individually addressable buttons.  Now the front buttons can be used for Start/Select, Coin/Start, pressed together to bring up menus in emulation, or even used as an additional button in games
 * Quickly link/unlink the two buttons on the fly with a simple button press.  Unlike with the original PCB, no opening of the case and rewiring of the buttons is required to link the two main buttons.  Simply press and hold the top two buttons for 1 second to link or unlink the buttons.  Now you can quickly switch between left and right handed use for 1 button games, or unlink the buttons and use them independently with arcade games that take advantage of both buttons.  The ArcadeR USB saves your last setting to the EEPROM of the Atmega32U4, so your buttons will stay linked or unlinked even after unplugging the controller.
@@ -98,8 +98,8 @@ Once everything is set, hit Sketch > Upload.  If the board does not program succ
 ## Links
 * [Retro Radionics - Maker of the ArcadeR Joystick](https://retroradionics.co.uk/)
 * [Arduino IDE](https://www.arduino.cc/en/software)
-* [Daemonbite Arcade Firmware Project](https://github.com/MickGyver/DaemonBite-Arcade-Encoder)
+* [Daemonbite Arcade Encoder Firmware Project](https://github.com/MickGyver/DaemonBite-Arcade-Encoder)
 
 
 ## License
-This PCB design and the firmware are licensed as GNU General Public License v3.0.  The DaemonBite firmware was modified for additional functionality with the ArcadeR USB PCB in accordance with it's GPL3 license.  For additional details please see [LICENSE](LICENSE)
+This PCB design and the firmware are licensed as GNU General Public License v3.0.  The DaemonBite Arcade Encoder firmware was modified with additional functionality specific to the ArcadeR USB PCB in accordance with it's GPL3 license.  For additional details please see [LICENSE](LICENSE)
