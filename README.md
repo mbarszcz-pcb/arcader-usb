@@ -3,6 +3,9 @@ Replacement PCB that brings USB connectivity to the Retroradionics ArcadeR Joyst
 
 <img src="./images/pcb/arcader-usb-render-diagonal.PNG" width=800px>
 
+<img src="./images/photos/20210606_135001_copy.jpg" width=800px>
+
+
 Quick Links
 * [Schematic](pdf/arcader-usb-1.0-schematic.pdf)
 * [Gerber Files](gerbers)
