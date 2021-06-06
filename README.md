@@ -101,3 +101,5 @@ Once everything is set, hit Sketch > Upload.  If the board does not program succ
 * [Daemonbite Arcade Firmware Project](https://github.com/MickGyver/DaemonBite-Arcade-Encoder)
 
 
+## License
+This PCB design and the firmware are licensed as GNU General Public License v3.0.  The DaemonBite firmware was modified for additional functionality with the ArcadeR USB PCB in accordance with it's GPL3 license.
